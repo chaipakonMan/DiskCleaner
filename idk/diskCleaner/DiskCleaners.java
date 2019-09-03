@@ -4,10 +4,17 @@ import java.io.File;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * DiskCleaners class will delete files that older then the given time T in the
+ * directory given.
+ * 
+ * @author Chaipakon Luangprasert
+ *
+ */
 public class DiskCleaners {
 
     public static void main(String[] args) {
-// C:\Users\DiaryOfNPC\Desktop\tester
+// Main just to help with testing !
         Scanner input = new Scanner(System.in);
         System.out.print("Dir path: ");
         String dir = input.nextLine();
@@ -17,6 +24,14 @@ public class DiskCleaners {
     }
 
 
+    /**
+     * 
+     * @param day
+     *            file older then this given day will be delete!
+     * @param dir
+     *            given directory
+     * @return
+     */
     public static int cleaner(int day, String dir) {
         int count = -1;
         File di = new File(dir);
